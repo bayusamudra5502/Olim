@@ -1,2 +1,2 @@
 # PustakaCpp
-Ini adalah perpustakaan CPP milik Bayu
+Ini adalah perpustakaan CPP-ku
