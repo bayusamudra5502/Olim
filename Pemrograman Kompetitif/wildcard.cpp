@@ -6,6 +6,7 @@ using namespace std;
 // Wildcard Problem
 // Link : https://training.ia-toki.org/training/curriculums/1/courses/11/chapters/50/problems/221/
 
+/*
 bool check(char* str, char* indikator){
     if(*str == *indikator){
         if(*str == '\0'){
@@ -26,6 +27,23 @@ bool check(char* str, char* indikator){
             return false;
         }
     }
+}
+*/
+
+bool check(char str[105], char form[105]){
+    for(int i = 0; form[i] != '*'; i++){
+        if(str[i] != form[i]){
+            return false;
+        }
+    }
+
+    for(int i = 1; form[strlen(form)-i] != '*'; i++){
+        if(str[strlen(str)-i] != form[strlen(form)-i]){
+            return false;
+        }
+    }
+
+    return true;
 }
 
 int main(){

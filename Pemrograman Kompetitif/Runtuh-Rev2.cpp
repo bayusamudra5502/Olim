@@ -1,16 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Bismillah..
-//
-// Program Runtuh (OSN 2006)
-// Link : https://training.ia-toki.org/training/curriculums/1/courses/11/chapters/50/problems/223/
-// STATUS : Wrong Answer (1)
-
 char matriks[25][10];
 bool hapus();
 int R,C;
-void swap(char &a, char &b);
 void runtuh();
 void isi();
 void cetak();
@@ -27,12 +20,6 @@ int main(){
     runtuh();
     cetak();
     return 0;
-}
-
-void swap(char &a, char &b){
-    char tmp = a;
-    a = b;
-    b = tmp;
 }
 
 void isi(){
@@ -73,18 +60,14 @@ bool hapus(){
 void runtuh(){
     if(hapus()){
         for(int j=0; j < C; j++){
-            for(int k=0; k <= maximum; k++){
-                for(int i = k; i < R-1; i++){
-                    if((matriks[i+1][j] == '1') && (i >= maximum)){
-                        break;
-                    }else{
-                        if(matriks[i+1][j] == '1'){
-                            continue;
-                       }else{
-                           swap(matriks[i][j], matriks[i+1][j]);
-                       }
-                    }
-                }
+            for(int i=maximum; i >= 0; i--){
+               if(matriks[i][j] == '1'){
+                   int tmp = i;
+                   while(matriks[tmp+1][j] != '1' && tmp < R-1){
+                       swap(matriks[tmp+1][j],matriks[tmp][j]);
+                       tmp++;
+                   }
+               }
             }
         }
 
