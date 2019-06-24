@@ -14,7 +14,7 @@ using namespace std;
  *** insert : Masukin data (HArus muat Capacitynya)
  * assign (* timpa)
  * Emplace : Tempatin di  sebelum elemen yg ditunjuk
- * Emplace_<front|back>
+ * Emplace_<front|back> : mirip push
  * 
  * ERASURE
  *** pop_front
