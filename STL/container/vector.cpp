@@ -11,22 +11,23 @@ using namespace std;
  * vector(list) : buat vector dengan isi list
  * 
  * INSERTION
- * push_back : Masukin belakang
- * insert : Masukin data (HArus muat Capacitynya)
+ *** push_back : Masukin belakang
+ *** insert : Masukin data (HArus muat Capacitynya)
  * assign (* timpa)
  * Emplace : Tempatin di  sebelum elemen yg ditunjuk
+ * Emplace_back
  * 
  * ERASURE
- * pop_back : Buang ekor
- * erase : BUang
- * clear : Buang semua
+ *** pop_back : Buang ekor
+ *** erase : BUang
+ *** clear : Buang semua
  * 
  * IDENTITAS
- * size : Ukuran
+ *** size : Ukuran
  * reserve : Realokasi memori
  * 
  * Lokasi
- * at, [] : Data ke-
+ *** at, [] : Data ke-
 */
 
 int main()
