@@ -66,5 +66,5 @@ int main()
     d.emplace_front(-9999);
     print(d);
 
-    // ERASURE
+    // ERASURE IDENTITAS LOKASI(Sama kayak vector)
 }
