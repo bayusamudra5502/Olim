@@ -30,44 +30,48 @@ bool check(char* str, char* indikator){
 }
 */
 
-bool check(char str[105], char form[105]){
-    for(int i = 0; form[i] != '*'; i++){
-        if(str[i] != form[i]){
-            return false;
-        }
+bool check(char str[105], char form[105])
+{
+    if (strlen(form) - 1 > strlen(str))
+    {
+        return false;
     }
-
-    for(int i = 1; form[strlen(form)-i] != '*'; i++){
-        if(str[strlen(str)-i] != form[strlen(form)-i]){
-            return false;
+    else
+    {
+        for (int i = 0; form[i] != '*'; i++)
+        {
+            if (str[i] != form[i])
+            {
+                return false;
+            }
         }
-    }
 
-    return true;
+        for (int i = 1; form[strlen(form) - i] != '*'; i++)
+        {
+            if (str[strlen(str) - i] != form[strlen(form) - i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
 
-int main(){
+int main()
+{
     char comp[105], tmp[105];
-    char db[105][105];
-    int dbn = 0;
     int n;
 
     scanf("%s", comp);
     scanf("%d", &n);
-    
-    for(int i = 0; i < n; i++){
+
+    for (int i = 0; i < n; i++)
+    {
         scanf("%s", tmp);
-        if(check(tmp,comp)){
-           strcpy(db[dbn],tmp);
-            dbn++;
+        if (check(tmp, comp))
+        {
+            printf("%s\n", tmp);
         }
-    }
-
-    for(int i = 0; i < dbn; i++){
-        printf("%s\n", db[i]);
-    }
-
-    if(dbn == 0){
-        printf("\n");
     }
 }
