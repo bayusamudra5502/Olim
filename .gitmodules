@@ -1,0 +1,3 @@
+[submodule "Pengaya/100days"]
+	path = Pengaya/100days
+	url = https://github.com/coells/100days.git
