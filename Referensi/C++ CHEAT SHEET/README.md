@@ -4,4 +4,4 @@ These are two cheat sheets I put together describing both basic [C++ syntax](C++
 
 Hopefully you find them useful, and please open an issue or submit a PR if you find incorrect or missing information!
 
-This cheat sheet was forked from https://github.com/gibsjose/cpp-cheat-sheet at June 25th, 2019. If you find any problem, you can open issue in original repo.
+**NOTE** This cheat sheet was forked from https://github.com/gibsjose/cpp-cheat-sheet at June 25th, 2019. If you find any problem, you can open issue in original repo.
