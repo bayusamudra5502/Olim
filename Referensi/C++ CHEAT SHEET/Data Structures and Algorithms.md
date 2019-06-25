@@ -187,14 +187,24 @@ std::list<int> l;
 //---------------------------------
 
 // Insert head, index, tail
-l.push_front(value);                    // head
-l.insert(l.begin() + index, value);     // index
-l.push_back(value);                     // tail
+l.push_front(value);          // head
+l.insert(pointer, value);     // index
+l.push_back(value);           // tail
+l.emplace(pointer, value);
 
 // Access head, index, tail
-int head = l.front();                                           // head
-int value = std::list<int>::iterator it = l.begin() + index;    // index
-int tail = l.back();                                            // tail
+// head
+int head = l.front();
+
+// index (Must include algorithm header)
+// Using Next
+int value = std::list<int>::iterator it = next(l.begin(),index);
+// Using advance
+auto it - l.begin();
+advance(it,index);
+
+//tail
+int tail = l.back();
 
 // Size
 unsigned int size = l.size();
@@ -206,7 +216,7 @@ for(std::list<int>::iterator it = l.begin(); it != l.end(); it++) {
 
 // Remove head, index, tail
 l.pop_front();                  // head
-l.erase(l.begin() + index);     // index
+l.erase(iterator);     			// index
 l.pop_back();                   // tail
 
 // Clear
@@ -220,7 +230,7 @@ l.clear();
 //	splice(iterator pos, list &x)
 //  	splice(iterator pos, list &x, iterator i)
 //  	splice(iterator pos, list &x, iterator first, iterator last)
-l.splice(l.begin() + index, list2);
+l.splice(iterator, list2);
 
 // Remove: Remove an element by value
 l.remove(value);
