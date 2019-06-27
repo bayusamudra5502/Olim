@@ -3,11 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-int compar(int a, int b)
-{
-    return a - b;
-}
-
 int main()
 {
     set<int, less<int>> db; // greater<int>
