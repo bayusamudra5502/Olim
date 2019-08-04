@@ -9,6 +9,7 @@ int main()
 
     while (true)
     {
+
         int center = (L + R) / 2;
         cout << center << endl;
 
