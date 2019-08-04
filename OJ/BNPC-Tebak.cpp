@@ -1,19 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int f(int x)
-{
-    if (x == 0)
-    {
-        return;
-    }
-    else
-    {
-        cout << x << endl;
-        f(x - 1);
-    }
-}
-
 int main()
 {
     int L = 1, R = 100;
